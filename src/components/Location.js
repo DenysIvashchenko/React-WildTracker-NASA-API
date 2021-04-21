@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import LocationFire from "@iconify/icons-mdi/file-alert";
+import LocationFire from "@iconify/icons-mdi/fire";
 import LocationMounten from "@iconify/icons-mdi/mountain";
 import LocationIce from "@iconify/icons-mdi/hurricane";
 

@@ -12,7 +12,10 @@ function LocationInfoBox({ info }) {
         <li>
           LINK:
           <strong>
-            <a href={info.link}> {info.link}</a>
+            <a target="_blank" href={info.link}>
+              {" "}
+              {info.link}
+            </a>
           </strong>
         </li>
       </ul>

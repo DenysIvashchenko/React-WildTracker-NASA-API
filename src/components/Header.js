@@ -1,5 +1,5 @@
 import { Icon } from "@iconify/react";
-import locationIcon from "@iconify/icons-mdi/file-alert";
+import locationIcon from "@iconify/icons-mdi/fire";
 
 function Header() {
   return (
