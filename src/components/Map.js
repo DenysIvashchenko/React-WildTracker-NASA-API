@@ -1,10 +1,10 @@
 import GoogleMapReact from "google-map-react";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { API_KEY } from "../env.json";
 import Location from "./Location";
 import LocationInfoBox from "./LocationInfoBox";
 
-function Map({ eventData, center, zoom }) {
+function Map({ eventData, center, zoom, hide }) {
   const [locationInfo, setLocationInfo] = useState(null);
 
   const marker = () => {
@@ -49,7 +49,7 @@ function Map({ eventData, center, zoom }) {
       >
         {marker()}
       </GoogleMapReact>
-      {locationInfo && <LocationInfoBox info={locationInfo} />}
+      {locationInfo && <LocationInfoBox info={locationInfo} hide={hide} />}
     </div>
   );
 }

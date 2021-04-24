@@ -7,9 +7,12 @@ import Loader from "./components/Loader";
 function App() {
   const [eventData, setEventData] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [hide, setHide] = useState(false);
 
-  const returnMap = () => {
-    return true;
+  const close = (e) => {
+    // if (e.target.className !== "location-info") return false;
+    setHide(true);
+    if (e.target.localName === "svg") setHide(false);
   };
 
   useEffect(() => {
@@ -23,17 +26,12 @@ function App() {
     };
 
     fetchEvents();
-    console.log(eventData);
   }, []);
 
   return (
-    <div>
+    <div onClick={close}>
       <Header />
-      {!loading ? (
-        <Map eventData={eventData} onClick={() => returnMap()} />
-      ) : (
-        <Loader />
-      )}
+      {!loading ? <Map eventData={eventData} hide={hide} /> : <Loader />}
     </div>
   );
 }

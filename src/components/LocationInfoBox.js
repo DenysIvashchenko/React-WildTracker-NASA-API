@@ -1,6 +1,6 @@
-function LocationInfoBox({ info }) {
+function LocationInfoBox({ info, hide }) {
   return (
-    <div className="location-info">
+    <div className={!hide ? "location-info" : "hide"}>
       <h2>Event Location Info</h2>
       <ul>
         <li>
